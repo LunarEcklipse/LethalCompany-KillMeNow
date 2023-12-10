@@ -261,10 +261,10 @@ namespace LC_Killbind_Mod
         {
             System.Console.WriteLine("KillMeNow patch function executed.");
             string inputText = __instance.chatTextField.text;
+            inputText = inputText.ToLower();
             if (inputText.StartsWith("/kill")) // The 
             {
                 System.Console.WriteLine("Attempting to kill player.");
-                inputText = inputText.ToLower();
                 string[] inputArr = inputText.Split(' ');
                 inputArr = inputArr.Where(x => !string.IsNullOrEmpty(x.Trim())).ToArray();
 
